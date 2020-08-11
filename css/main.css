@@ -1,0 +1,206 @@
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#group10{
+  margin-left: 20px;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#navbar{
+  justify-self: right;
+  margin-right: 100px;
+  margin-top: 20px;
+  grid-row: 1;
+  grid-column: 2;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  color: #2F2E41;
+}
+
+#main, #signin, #about, #contact{
+  margin-right: 35px;
+}
+
+#mainPhoto{
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 50px;
+}
+
+#aboutus{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100px;
+  line-height: 131px;
+
+  color: #2F2E41;
+}
+
+#desc{
+  grid-row: 2;
+  grid-column: 2;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 60px;
+  color: #000000;
+}
+
+#seconddesc, #thirddesc{
+  margin-top: 20px;
+}
+
+#thirddesc{
+  color: #3BB920;
+}
+
+#improvebutton, #signinasbuyer, #signinasseller{
+  margin-top: 20px;
+  background: #3BB920;
+  border-radius: 10px;
+  width: 386px;
+  height: 80px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+  color: #F5F5F5;
+}
+
+#helpimprove{
+  font-size: 30px;
+  line-height: 45px;
+  margin-left: 20px;
+  color: #3BB920;
+}
+
+.green{
+  color: #3BB920;
+}
+
+#gridcont{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 80%;
+}
+
+#maingrid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 80%;
+}
+
+#mainphoto2{
+  grid-row: 2;
+  grid-column: 2;
+  width: 90%;
+}
+
+#letusimprove{ 
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100px;
+  line-height: 131px;
+
+  color: #2F2E41;
+}
+
+#withjustfewclicks{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+
+  color: #2F2E41;
+}
+#leftMain{
+  grid-row: 2;
+  grid-column:1;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+#bestsofar{
+  margin-right: 230px; 
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 75px;
+
+  color: #2F2E41;
+}
+
+#lowerbestsofar{
+  font-size: 30px;
+  line-height: 45px;
+}
+
+#group56{
+  display: block;
+  margin: 100px auto;
+}
+
+#signingrid{
+  display: grid;
+  grid-template-columns: 50%;
+  grid-template-rows: 20%;
+}
+
+#buttonsgrid{
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-column-gap: 20%;
+  grid-template-rows: 50% 30%;
+}
+
+#signinasbuyer{
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: right;
+}
+
+#signinasseller{
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: left;
+}
+
+#signuptext1, #signuptext2{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+
+  /* identical to box height */
+
+  color: #3BB920;
+}
+
+#signuptext1{
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: right;
+}
+
+#signuptext2{
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: left;
+}

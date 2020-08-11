@@ -1,4 +1,4 @@
-function loadNavbar(path, selectedItem){
+function loadNavbar(path, selectedItem = 0){
   const head = document.querySelector('head');
   const body = document.querySelector('body');
 

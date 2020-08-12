@@ -6,12 +6,15 @@
 }
 
 body{
+  height: 100vh;
   margin: 0;
   background: slategray;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .navbar{
-  margin: 40px 100px 0 0;
+  margin: 20px 100px 20px 0;
   width: calc(100vw - 100px);
   display: flex;
   align-items: center;

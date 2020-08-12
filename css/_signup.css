@@ -1,0 +1,76 @@
+.grid{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr fit-content(40%) 2fr;
+  align-items: center;
+}
+
+.signup-form{
+  max-width: 700px;
+  grid-column: 4;
+}
+
+.names{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+label{
+  margin-bottom: 16px;
+}
+
+input[type="submit"]{
+  margin-top: 8px;
+  float: right;
+  width: 330px;
+}
+
+.img-with-slogan{
+  position: relative;
+  grid-column: 2;
+  width: 100%;
+}
+
+.img-signup{
+  width: 100%;
+}
+
+.slogan{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+h2{
+  line-height: 2.2rem;
+}
+
+.code-form{
+  grid-column: 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+}
+
+.code-form p{
+  width: 100%;
+  text-align: left;
+}
+
+.code{
+  width: min-content;
+}
+
+.code input{
+  width: 220px;
+  height: 110px;
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  text-align: center;
+}
+
+.code-form input[type="submit"]{
+  margin-top: 65px;
+  justify-self: right;
+}

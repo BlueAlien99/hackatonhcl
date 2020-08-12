@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('reset.css');
+
+:root{
+  --black: #2F2E41;
+  --white: #F5F5F5;
+  --accent-color: #3BB920;
+
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+body{
+  margin: 0;
+  background: slategray;
+}
+
+h1{
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  line-height: 3.275rem;
+}
+
+h2{
+  font-size: 1.75rem;
+}
+
+h3{
+  font-size: 1rem;
+}
+
+h6{
+  font-size: 0.625rem;
+  line-height: 0.925rem;
+}
+
+a{
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+button,
+input[type="submit"]{
+  padding: 8px;
+  background: var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all .4s ease-in-out;
+}
+
+button:hover,
+input[type="submit"]:hover{
+  background: var(--white);
+  color: var(--accent-color);
+}
+
+.btn-white{
+  background: var(--white);
+  color: var(--accent-color);
+}
+
+.btn-white:hover{
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+.btn-light{
+  padding: 16px;
+  font-size: .75rem;
+  font-weight: 300;
+}
+
+p{
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+q{
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.accent{
+  color: var(--accent-color);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"]{
+  display: block;
+  width: 100%;
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--accent-color);
+}
+
+label{
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

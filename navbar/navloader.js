@@ -1,4 +1,4 @@
-function loadNavbar(path, selectedItem = 0){
+function loadNavbar(path, selectedItem = 0, replace = ''){
   const head = document.querySelector('head');
   const body = document.querySelector('body');
 
@@ -14,6 +14,9 @@ function loadNavbar(path, selectedItem = 0){
       if(selectedItem > 0){
         const navlinks = docFrag.content.querySelectorAll('.nav-link');
         navlinks[selectedItem - 1].classList.add('nav-active');
+        if(replace){
+          navlinks[selectedItem - 1].querySelector('a').textContent = replace;
+        }
       }
 
       body.prepend(docFrag.content);

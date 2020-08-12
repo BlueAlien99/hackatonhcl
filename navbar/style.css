@@ -51,3 +51,18 @@ body{
   color: var(--accent-color);
   border-bottom: 3px solid var(--accent-color);
 }
+
+/* Alts */
+
+.navbar.landing-buyer{
+  margin-bottom: calc(20px + 1rem);
+}
+
+.logo.landing-buyer{
+  position: relative;
+}
+
+p.landing-buyer{
+  position: absolute;
+  margin: 0;
+}

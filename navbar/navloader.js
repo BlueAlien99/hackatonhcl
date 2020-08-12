@@ -1,8 +1,8 @@
-function loadNavbar(path, selectedItem = 0, replace = ''){
+function loadNavbar(path, selectedItem = 0, replace = '', alt = ''){
   const head = document.querySelector('head');
   const body = document.querySelector('body');
 
-  fetch(`${path}/navbar.html`)
+  fetch(alt ? `${path}/${alt}` : `${path}/navbar.html`)
     .then(d => d.text())
     .then(d => {
       const docFrag = document.createElement('template');

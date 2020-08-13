@@ -133,3 +133,33 @@ label{
   background: var(--accent-color);
   color: #FFF;
 }
+
+/* score */
+
+.box.score{
+  grid-area: sc;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.score a{
+  color: var(--black);
+  justify-self: self-end;
+}
+
+p.score{
+  margin: 0;
+  margin-top: .5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+p.score :first-child {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+p.score .outof {
+  display: inline-block;
+  font-weight: 900;
+}

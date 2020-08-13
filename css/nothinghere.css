@@ -1,0 +1,24 @@
+#nothing-content{
+    display: grid;
+    grid-template-columns: 0.55fr 0.45fr;
+    justify-items: center;
+}
+
+#right-side{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 50% 20% 15% 15%;
+}
+
+#nothing-img{
+    grid-column: 1;
+    width: 80%;
+}
+
+#nothing-text{
+    grid-row: 1;
+}
+
+#main-menu{
+    grid-row: 3;
+}

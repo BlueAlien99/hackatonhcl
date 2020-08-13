@@ -1,7 +1,8 @@
 .grid{
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
-  grid-template-rows: 1fr auto 1fr auto 1fr;
+  grid-template-rows: 1fr auto 2fr auto 2fr;
+  gap: 20px;
   align-items: center;
   justify-items: center;
 }
@@ -12,6 +13,7 @@
 }
 
 .btns{
+  position: relative;
   grid-row: 4;
 }
 
@@ -30,4 +32,15 @@
 
 .btns{
   text-align: right;
+}
+
+.demo{
+  position: absolute;
+  top: -2rem;
+  width: 100%;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+  min-width: 350px;
 }

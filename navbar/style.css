@@ -76,12 +76,22 @@ button.landsel{
 }
 
 @media (max-width: 1400px){
-  .logo{
+  .landing-buyer .logo{
     display: none;
   }
 
-  .navbar,
   .navbar.landing-buyer{
+    margin: 20px 20px 20px 0;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 1100px){
+  .navbar .logo{
+    display: none;
+  }
+
+  .navbar{
     margin: 20px 20px 20px 0;
     justify-content: flex-end;
   }

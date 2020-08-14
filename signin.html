@@ -28,6 +28,16 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const img = document.querySelector('.img-signin');
+    const span = document.querySelector('.signin-form h2 span');
+
+    if(sessionStorage.getItem('signinAsSeller') === 'true'){
+      img.src = 'images/signin-seller.png';
+      span.textContent = 'as seller';
+    }
+  </script>
   
 </body>
 </html>

@@ -18,6 +18,7 @@ body{
   width: calc(100vw - 100px);
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 
 .logo{

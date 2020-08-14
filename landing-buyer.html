@@ -16,7 +16,7 @@
     <div class="box score">
       <h3>Your <span class="accent">score</span></h3>
       <p class="score">
-        <span>676</span>
+        <span>???</span>
         <span class="outof">/1000</span>
       </p>
       <a href="#">See why <img src="images/arrow_black.png"></a>
@@ -24,10 +24,10 @@
     <div class="box hl raport">
       <div class="rap-wrapper">
         <div class="some-text">
-          <h3>Try out first weekly competitors raport for free</h3>
+          <h3>Try out first weekly competitors report for free</h3>
           <h4>We deliver new data every week for just 5$</h4>
           <div class="buttons">
-            <button class="btn-white btn-light">Download!</button>
+            <button class="btn-white btn-light" id="dlpdf">Download!</button>
             <a href="#">More info <img src="images/arrow_white.png"></a>
           </div>
         </div>
@@ -38,9 +38,9 @@
       <div>
         <h3><span class="accent">Improve</span> your customer satisfaction rate</h3>
         <h4>By supporting local businesses as yours</h4>
-        <p class="small">There are <span class="accent">a lot of</span> reviews showing that you need to improve <span class="accent">REASON1</span></p>
-        <p class="small">There are <span class="accent">a lot of</span> reviews showing that you need to improve <span class="accent">REASON1</span></p>
-        <a href="#">View more <img src="images/arrow.png"></a>
+        <p class="small">There are <span class="accent">a lot of</span> reviews showing that you need to improve <span class="accent" id="reason1">REASON1</span></p>
+        <p class="small">There are <span class="accent">a lot of</span> reviews showing that you need to improve <span class="accent" id="reason2">REASON1</span></p>
+        <button class="improve">Improve</button>
       </div>
       <img src="images/landing-buyer1.png">
     </div>
@@ -56,6 +56,8 @@
       </div>
     </div>
   </div>
+
+  <script src="js/landing-buyer.js" type="module"></script>
   
 </body>
 </html>

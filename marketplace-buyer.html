@@ -16,7 +16,7 @@
     <div class="box score">
       <h3>Your <span class="accent">score</span></h3>
       <p class="score">
-        <span>676</span>
+        <span>???</span>
         <span class="outof">/1000</span>
       </p>
       <a href="#">See why <img src="images/arrow_black.png"></a>
@@ -25,11 +25,11 @@
       <div>
         <h3><span class="accent">Category</span></h3>
         <div class="cat-flex">
-          <div class="cat-sel">Service (employees)</div>
-          <div class="cat-sel">Personal protective equipment</div>
-          <div class="cat-sel cat-selected">Technological improvements</div>
-          <div class="cat-sel cat-selected">Cleanliness</div>
-          <div class="cat-sel">Consumables</div>
+          <div class="cat-sel" data-cat="SERVICE">Service (employees)</div>
+          <div class="cat-sel" data-cat="PERSONAL">Personal protective equipment</div>
+          <div class="cat-sel cat-selected" data-cat="TECHNOLOGICAL">Technological improvements</div>
+          <div class="cat-sel cat-selected" data-cat="CLEANLINESS">Cleanliness</div>
+          <div class="cat-sel" data-cat="CONSUMABLES">Consumables</div>
         </div>
       </div>
       <div class="sortby-wrapper">
@@ -86,6 +86,8 @@
       </div>
     </div>
   </div>
+
+  <script src="js/marketplace-buyer.js" type="module"></script>
   
 </body>
 </html>

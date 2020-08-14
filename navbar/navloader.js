@@ -24,4 +24,7 @@ function loadNavbar(path, selectedItem = 0, replace = '', alt = ''){
 
   const css = `<link rel="stylesheet" href="${path}/style.css">`;
   head.insertAdjacentHTML('beforeend', css);
+
+  const favicon = '<link rel="icon" type="image/png" href="images/favicon.png">';
+  head.insertAdjacentHTML('beforeend', favicon);
 }

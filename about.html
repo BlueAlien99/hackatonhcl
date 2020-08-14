@@ -10,8 +10,6 @@
 </head>
 <body>
 
-  <script>loadNavbar('navbar', 3);</script>
-
   <div class="grid">
     <img class="img-about" src="images/about.png">
     <div class="wall-of-text">
@@ -20,13 +18,39 @@
       <p>We use <span class="accent">Big Data</span> to provide easy solutions on how <span class="accent">to improve</span> local busineses.</p>
       <p class="accent">We link B2B to make it happen.</p>
       <div class="btns">
-        <button onclick="gotoSignup('buyer')" class="btn-light">Join and improve</button>
+        <!-- <button onclick="gotoSignup('buyer')" class="btn-light">Join and improve</button> -->
+        <button onclick="location.href = './biz-choice.html'" class="btn-light">Join and improve</button>
         <a onclick="gotoSignup('seller')">Help improving <img src="images/arrow.png"></a>
       </div>
     </div>
   </div>
 
   <script>
+
+    const btnsBtn = document.querySelector('.btns button');
+    const btnsAhref = document.querySelector('.btns a');
+    const userkey = sessionStorage.getItem('userkey');
+    let target = '';
+
+    if(userkey || userkey === 0){
+      btnsAhref.remove();
+      if(userkey >= 0){
+        target = 'landing-buyer';
+        btnsBtn.textContent = 'Improve score';
+      }
+      else if(userkey < 0){
+        target = 'landing-seller';
+        btnsBtn.textContent = 'Help improving';
+      }
+    }
+
+    if(target){
+      loadNavbar('navbar', 4, '', `navbar-${target}.html`);
+      btnsBtn.onclick = () => location.href = `./${target}.html`;
+    } else{
+      loadNavbar('navbar', 3);
+    }
+
     function gotoSignup(type){
       if(type === 'seller'){
         sessionStorage.setItem('signupAsSeller', true);

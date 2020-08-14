@@ -26,6 +26,10 @@ function setReasons(scores){
   reasons.sort((a, b) => a.score - b.score);
   reason1.textContent = reasons[0].reason;
   reason2.textContent = reasons[1].reason;
+  console.table(reasons);
+
+  const reasonsFiltered = reasons.filter(r => r.score > 0);
+  console.log(reasonsFiltered)
 
   sessionStorage.setItem('reason1', reasons[0].reason);
   sessionStorage.setItem('reason2', reasons[1].reason);
@@ -35,6 +39,6 @@ function downloadReport(){
   const anchor = document.createElement('a');
   anchor.target = '_blank';
   anchor.rel = 'noopener noreferrer';
-  anchor.href = `${api}/pdf_report`;
+  anchor.href = `${api}/pdf_report2`;
   anchor.click();
 }

@@ -21,7 +21,8 @@
       <a onclick="gotoSignup('buyer')">sign up <img src="images/arrow.png"></a>
     </div>
     <div class="btns">
-      <button onclick="gotoSignin('seller')" class="btn-white">sign in as seller</button>
+      <!-- <button onclick="gotoSignin('seller')" class="btn-white">sign in as seller</button> -->
+      <button onclick="sellerLogin()" class="btn-white">sign in as seller</button>
       <a onclick="gotoSignup('seller')">sign up <img src="images/arrow.png"></a>
     </div>
   </div>
@@ -43,6 +44,11 @@
         sessionStorage.setItem('signupAsSeller', false);
       }
       location.href = './signup.html';
+    }
+
+    function sellerLogin(){
+      sessionStorage.setItem('userkey', -100);
+      location.href = './landing-seller.html';
     }
   </script>
 

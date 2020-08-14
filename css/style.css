@@ -15,7 +15,8 @@
 
 body{
   margin: 0;
-  background: slategray;
+  background: var(--white);
+  color: var(--black);
 }
 
 h1{

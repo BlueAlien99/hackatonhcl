@@ -1,10 +1,11 @@
 .grid{
   margin: 40px;
+  margin-bottom: 0;
   height: 100%;
   display: grid;
   gap: 40px;
   grid-template-columns: 3fr 6fr 4fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, min-content);
   grid-template-areas: 
     "sc rp rp"
     "re re nf";

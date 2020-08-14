@@ -32,5 +32,15 @@
     </form>
   </div>
   
+  <script>
+    const img = document.querySelector('.img-with-slogan img');
+    const span = document.querySelector('.img-with-slogan .slogan h3');
+
+    if(sessionStorage.getItem('signupAsSeller') === 'true'){
+      img.src = 'images/signin-seller.png';
+      span.innerHTML = '<span class="accent">help improving</span>';
+    }
+  </script>
+
 </body>
 </html>

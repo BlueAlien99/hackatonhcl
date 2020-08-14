@@ -16,14 +16,25 @@
     <img class="img-signin" src="images/signin.png">
     <div class="btns">
       <p class="demo">DEMO: Choose from over 30K businesses from Delhi alone!</p>
-      <button onclick="location.href='./signin-buyer.html'">sign in as buyer</button>
-      <a href="./signup-buyer.html">sign up <img src="images/arrow.png"></a>
+      <button onclick="location.href='./biz-choice.html'">sign in as buyer</button>
+      <a onclick="gotoSignup('buyer')">sign up <img src="images/arrow.png"></a>
     </div>
     <div class="btns">
       <button onclick="location.href='./signin-seller.html'" class="btn-white">sign in as seller</button>
-      <a href="./signup-seller.html">sign up <img src="images/arrow.png"></a>
+      <a onclick="gotoSignup('seller')">sign up <img src="images/arrow.png"></a>
     </div>
   </div>
   
+  <script>
+    function gotoSignup(type){
+      if(type === 'seller'){
+        sessionStorage.setItem('signupAsSeller', true);
+      } else{
+        sessionStorage.setItem('signupAsSeller', false);
+      }
+      location.href = './signup.html';
+    }
+  </script>
+
 </body>
 </html>

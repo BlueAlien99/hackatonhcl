@@ -10,8 +10,8 @@ function getLocations(opt = ''){
 
   const endpoint = opt ? opt : `/containing/${input.value}`;
 
-  if(!input.value){
-    input.value = 'sushi';
+  if(!input.value && !opt){
+    return;
   }
 
   fetch(api + '/location' + endpoint)

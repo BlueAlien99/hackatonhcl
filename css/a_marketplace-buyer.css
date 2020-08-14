@@ -73,6 +73,7 @@
 .products{
   grid-area: pr;
   min-width: 1px;
+  min-height: 511px;
 }
 
 .products > h3{

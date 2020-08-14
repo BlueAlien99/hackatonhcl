@@ -19,13 +19,55 @@ export async function setScore(span){
   return json;
 }
 
-export function setProducts(){
+export async function setProducts(){
+  const showcase = document.querySelector('.prod-scroll-inner');
+  const sortSel = document.querySelector('#sort');
+  const sortType = sortSel ? sortSel.value : '';
 
+  let cats = document.querySelectorAll('.cat-sel[data-cat]');
+  cats = Array.from(cats).filter(c => c.classList.contains('cat-selected'));
+
+  const products = [];
+
+  await Promise.all(cats.map(async cat => {
+    let prods = await fetch(api + `/product/find/${cat.getAttribute('data-cat')}`);
+    prods = await prods.json();
+    products.push(...prods);
+  }));
+
+  let html = '';
+
+  switch(sortType){
+    case 'expensive':
+      products.sort((a, b) => b.price - a.price);
+      break;
+    case 'available':
+      products.sort((a, b) => b.quantity - a.quantity);
+      break;
+    default:
+      products.sort((a, b) => a.price - b.price);
+  }
+
+  products.forEach(p => {
+    html += `
+      <div class="product">
+        <img src="images/placeholders/mrclean.png">
+        <p>${p.name}, ${p.description}</p>
+        <p>${p.price.toFixed(2)}$/piece</p>
+        <a href="#">more <img src="images/arrow.png"></a>
+      </div>
+    `;
+  });
+
+  showcase.innerHTML = html;
 }
 
 export function prodCatsListener(){
   const cats = document.querySelectorAll('.cat-sel[data-cat]');
   cats.forEach(c => {
-    c.addEventListener('click', e => e.currentTarget.classList.toggle('cat-selected'));
+    c.addEventListener('click', e => {
+      e.currentTarget.classList.toggle('cat-selected');
+      setProducts();
+    });
   });
 }

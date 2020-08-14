@@ -5,8 +5,8 @@ const scorespan = document.querySelector('p.score span:first-child');
 const improveBtn = document.querySelector('.improve');
 const dlpdfBtn = document.querySelector('#dlpdf');
 
-const reason1 = document.querySelector('#reason1');
-const reason2 = document.querySelector('#reason2');
+const reason1span = document.querySelector('#reason1');
+const reason2span = document.querySelector('#reason2');
 
 setScore(scorespan).then(d => setReasons(d));
 
@@ -24,15 +24,20 @@ function setReasons(scores){
   ];
 
   reasons.sort((a, b) => a.score - b.score);
-  reason1.textContent = reasons[0].reason;
-  reason2.textContent = reasons[1].reason;
-  console.table(reasons);
+  const reasonsFl = reasons.filter(r => r.score > 0);
 
-  const reasonsFiltered = reasons.filter(r => r.score > 0);
-  console.log(reasonsFiltered)
+  let reason1 = reasonsFl[0] ? reasonsFl[0].reason : '';
+  let reason2 = reasonsFl[1] ? reasonsFl[1].reason : '';
 
-  sessionStorage.setItem('reason1', reasons[0].reason);
-  sessionStorage.setItem('reason2', reasons[1].reason);
+  reason1span.textContent = reason1;
+  reason2span.textContent = reason2;
+
+  if(!reason2){
+    reason2span.parentElement.style.display = 'none';
+  }
+
+  sessionStorage.setItem('reason1', reason1);
+  sessionStorage.setItem('reason2', reason2);
 }
 
 function downloadReport(){

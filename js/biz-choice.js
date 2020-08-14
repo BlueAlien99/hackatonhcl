@@ -6,19 +6,22 @@ const submit = document.querySelector('#search');
 const locations = document.querySelector('#locations');
 const rcol = document.querySelector('.rcol');
 
-function getLocations(){
+function getLocations(opt = ''){
+
+  const endpoint = opt ? opt : `/containing/${input.value}`;
 
   if(!input.value){
     input.value = 'sushi';
   }
 
-  fetch(api + `/location/containing/${input.value}`)
+  fetch(api + '/location' + endpoint)
     .then(d => d.json())
     .then(d => {
-      const kw = input.value;
       let html = '';
+      if(opt){
+        d = d.content;
+      }
       d.forEach(e => {
-        rcol.style.display = 'block';
         html += `
           <button class="btn-light" data-userkey="${e.user_key}" data-locid="${e.id}">${e.name}<br>${e.address}</button>
         `;
@@ -42,6 +45,8 @@ function gotoLanding(e){
   sessionStorage.setItem('locid', locid);
   window.location.href = './landing-buyer.html';
 }
+
+getLocations('/top20');
 
 input.addEventListener('keydown', e => {
   if(e.key === "Enter"){

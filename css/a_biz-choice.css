@@ -25,7 +25,6 @@
 }
 
 .rcol{
-  display: none;
   grid-column: 4;
   height: 50vh;
   max-width: 600px;

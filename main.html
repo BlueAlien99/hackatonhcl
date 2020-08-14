@@ -17,8 +17,8 @@
         <h1>Let us improve <span class="accent">your</span> business</h1>
         <h6>With just few clicks make your customers happier than ever before</h6>
         <div class="btns">
-          <button onclick="location.href='./signup-buyer.html'" class="btn-light">Join and improve</button>
-          <a href="./signup-seller.html">Help improving <img src="images/arrow.png"></a>
+          <button onclick="gotoSignup('buyer')" class="btn-light">Join and improve</button>
+          <a onclick="gotoSignup('seller')">Help improving <img src="images/arrow.png"></a>
         </div>
         <div class="quote">
           <q>“The best tool so far”</q>
@@ -27,6 +27,17 @@
     </div>
     <img class="img-main" src="images/main.png">
   </div>
+
+  <script>
+    function gotoSignup(type){
+      if(type === 'seller'){
+        sessionStorage.setItem('signupAsSeller', true);
+      } else{
+        sessionStorage.setItem('signupAsSeller', false);
+      }
+      location.href = './signup.html';
+    }
+  </script>
   
 </body>
 </html>

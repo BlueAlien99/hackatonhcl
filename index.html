@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="navbar/navloader.js"></script>
+  <title>Redirect</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
-  <script>loadNavbar('navbar', 1);</script>
+  <script>
 
+    const userkey = sessionStorage.getItem('userkey');
+    let target = '';
 
+    if(userkey || userkey === 0){
+      if(userkey >= 0)
+        target = 'landing-buyer';
+      else if(userkey < 0)
+        target = 'landing-seller';
+    }
+
+    if(target){
+      location.href = `./${target}.html`;
+    } else{
+      location.href = './main.html';
+    }
+
+  </script>
   
 </body>
 </html>

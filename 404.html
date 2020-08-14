@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForeSights</title>
+  <script src="navbar/navloader.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/404.css">
+</head>
+<body>
+
+  <div id="notimgwrap">
+    <img id="notimg" src="images/404.png">
+  </div>
+
+  <div id="notwrap">
+    <div id="nothing">
+      <h1>Nothing<br>to see here <span class="accent">yet</span></h1>
+      <button id="mainBtn">Main menu</button>
+    </div>
+  </div>
+  
+  <script>
+
+    const mainBtn = document.querySelector('#mainBtn');
+    const userkey = sessionStorage.getItem('userkey');
+    let target = '';
+
+    if(userkey || userkey === 0){
+      if(userkey >= 0)
+        target = 'landing-buyer';
+      else if(userkey < 0)
+        target = 'landing-seller';
+    }
+
+    if(target){
+      loadNavbar('navbar', 0, '', `navbar-${target}.html`);
+      mainBtn.onclick = () => location.href = `./${target}.html`;
+    } else{
+      loadNavbar('navbar');
+      mainBtn.onclick = () => location.href = './main.html';
+    }
+
+  </script>
+
+</body>
+</html>

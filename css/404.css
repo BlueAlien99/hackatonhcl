@@ -1,0 +1,44 @@
+#notimgwrap{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#notimg{
+  position: absolute;
+  top: 200px;
+  left: 80px;
+}
+
+#notwrap{
+  display: grid;
+  grid-template-columns: 5fr auto 1fr;
+  grid-template-rows: 1fr;
+  align-content: center;
+  justify-items: end;
+  overflow: hidden;
+}
+
+div#nothing{
+  grid-column: 2;
+  max-width: 600px;
+  margin: 40px;
+  background: var(--white);
+  box-shadow: 0 0 64px 128px var(--white);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  align-content: center;
+  justify-items: start;
+  justify-content: end;
+  z-index: 5;
+}
+
+#nothing h1{
+  margin-bottom: 120px;
+}
+
+#nothing button{
+  padding: 16px 64px;
+}

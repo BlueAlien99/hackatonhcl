@@ -17,7 +17,7 @@
   <div id="notwrap">
     <div id="nothing">
       <h1>Nothing<br>to see here <span class="accent">yet</span></h1>
-      <button id="mainBtn">Main menu</button>
+      <button id="mainBtn">Test more</button>
     </div>
   </div>
   
@@ -36,11 +36,13 @@
 
     if(target){
       loadNavbar('navbar', 0, '', `navbar-${target}.html`);
-      mainBtn.onclick = () => location.href = `./${target}.html`;
+      // mainBtn.onclick = () => location.href = `./${target}.html`;
     } else{
       loadNavbar('navbar');
-      mainBtn.onclick = () => location.href = './main.html';
+      // mainBtn.onclick = () => location.href = './main.html';
     }
+
+    mainBtn.onclick = () => location.href = './biz-choice.html';
 
   </script>
 

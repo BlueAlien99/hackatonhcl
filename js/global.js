@@ -51,7 +51,7 @@ export async function setProducts(){
   products.forEach(p => {
     html += `
       <div class="product">
-        <img src="images/placeholders/mrclean.png">
+        <img src="${api}/image/get/${p.type}/${p.fileName}">
         <p>${p.name}, ${p.description}</p>
         <p>${p.price.toFixed(2)}$/piece</p>
         <a href="#">more <img src="images/arrow.png"></a>

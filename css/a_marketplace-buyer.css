@@ -112,12 +112,13 @@
   grid-template-rows: repeat(3, auto) 1fr;
   padding: 16px;
   justify-items: center;
+  overflow: hidden;
 }
 
 .product > img{
   margin-top: 8px;
   max-width: 240px;
-  max-height: 150px;
+  max-height: 120px;
   width: auto;
   height: auto;
 }
@@ -153,6 +154,7 @@
 /* PRODUCT-BUYER.HTML */
 
 .product-card{
+  display: none;
   grid-area: pr;
 }
 

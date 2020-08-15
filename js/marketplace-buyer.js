@@ -14,3 +14,19 @@ prodCatsListener();
 setProducts();
 
 sortSel.addEventListener('change', () => setProducts());
+
+// Product page
+
+const plus = document.querySelector('.plusminus #plus');
+const minus = document.querySelector('.plusminus #minus');
+const qt = document.querySelector('.plusminus input');
+
+plus.addEventListener('click', () => {
+  qt.value = parseInt(qt.value) + 1;
+});
+
+minus.addEventListener('click', () => {
+  if(qt.value > 0){
+    qt.value = parseInt(qt.value) - 1;
+  }
+});

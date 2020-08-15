@@ -7,6 +7,7 @@
   <script src="navbar/navloader.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/a_marketplace-buyer.css">
+  <script src="js/product.js" defer></script>
 </head>
 <body>
 
@@ -81,6 +82,29 @@
             <p>786$/piece</p>
             <a href="#">more <img src="images/arrow.png"></a>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="box product-card">
+      <div>
+        <a onclick="closeProduct()">Go back <img src="images/arrow.png"></a>
+      </div>
+      <div class="prod-info">
+        <div class="prod-img">
+          <img src="images/placeholders/mrclean-bigboi.png">
+        </div>
+        <div class="price-and-description">
+          <h3>Mr. Clean Magic Eraser Original, Cleaning Pads</h3>
+          <p class="price"><span class="accent">Price</span> <span id="prod-price">6,97</span>$</p>
+          <p class="description">I love cake jelly beans gummi bears. Pie chocolate cake tootsie roll I love pudding dessert soufflé lollipop. Jelly beans I love gummies topping. Halvah tart marshmallow oat cake I love biscuit. Carrot cake cookie caramels gingerbread cotton candy chupa chups cotton candy I love.</p>
+        </div>
+        <div class="buttons">
+          <div class="plusminus">
+            <button id="minus">-</button>
+            <input id="qt" type="text" value="1" disabled>
+            <button id="plus">+</button>
+          </div>
+          <button class="addprod">Add to basket</button>
         </div>
       </div>
     </div>

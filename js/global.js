@@ -50,11 +50,11 @@ export async function setProducts(){
 
   products.forEach(p => {
     html += `
-      <div class="product">
+      <div class="product" data-prodid="${p.id}">
         <img src="${api}/image/get/${p.type}/${p.fileName}">
-        <p>${p.name}, ${p.description}</p>
+        <p>${p.name}, ${p.description.substring(0, 64)}</p>
         <p>${p.price.toFixed(2)}$/piece</p>
-        <a href="#">more <img src="images/arrow.png"></a>
+        <a onclick="openProduct(this)">more <img src="images/arrow.png"></a>
       </div>
     `;
   });
